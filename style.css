@@ -1,26 +1,101 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kavoon&display=swap');
 
-/*--colors--*/
+/* -------------------- IMPORTED FONTS -------------------- */
+
+/*-------------CSS BY CHRISTINA ADJAN-------------*/
+/*-------------------- CSS RESET --------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* -------------------- ROOT VARIABLES  -------------------- */
 :root{
     --teal: #4CA7C0;
     --purple: #484FB7;
-    --Lavender: #6B8FE7
+    --Lavender: #6B8FE7;
     --Yellow: #E9BB57; 
     --Pink:#D9526F;
     --Dark-gray:#1E1E1E; 
     --White:#ffffff;
 }
 
-h1, h2{
+html{
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+h1, h2 {
     font-family: Kavoon;
+    color: var(--White);
 }
 
 body{
     font-family: Inter;
+  background-color: var(--purple);
 }
 
 h1{
     font-size: 3em;
+    background-color: var(--Lavender);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 40px;
+    text-align: center;
+}
+
+.slogan {
+    background-color: var(--Pink);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 40px 0 0 10px;
+    text-align: center;
+    color: var(--White);
 }
 
 nav h2{
@@ -33,8 +108,109 @@ h2{
 
 h3{
     font-size: 1.5em;
+    color: var(--Yellow);
 }
 
 h4{
     font-size: 1.15em;
+    color: var(--purple)
 }
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: var(--Yellow);
+}
+
+.services{
+    display: block;
+}
+.subcontainer {
+    background-color: var(--White);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.why {
+    background-color: var(--Pink);
+    padding: 10px;
+    margin: auto;
+}
+
+.why-choose {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.approach {
+    background-color: var(--teal);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+}
+
+.proven {
+    background-color: var(--Lavender);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+}
+
+.support {
+    background-color: var(--Yellow);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+}
+
+.flex {
+    background-color: var(--White);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+
+}
+
+table {
+    border: var(--Yellow);
+}
+
+th {
+    background-color: var(--Yellow);
+}
+
+table td {
+    border: 1px solid var(--Yellow);
+    background-color: var(--White);
+    padding: 8px;
+    word-wrap: break-word;
+    word-break: break-word;
+    max-width: 50%;
+}
+
+table td:first child {
+    text-align: left;
+}
+
+table td:last child {
+    text-align: left;
+}
+
+/* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
+@media screen and (min-width:450px){
+    .coaching{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+}
+/*-------------------- MEDIA QUERY (medium) --------------------------------*/
+@media  (min-width: 620px) {
+    .coaching{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+   
+}
+/*-------------------- MEDIA QUERY (large) ------------------------------------*/
+/*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
