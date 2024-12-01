@@ -136,9 +136,12 @@ nav {
 .why {
     background-color: var(--Pink);
     padding: 10px;
-    margin: auto;
-}
+    margin: 10px 0;
 
+}
+.why p {
+    color: var(--White);
+}
 .why-choose {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -147,7 +150,7 @@ nav {
     background-color: var(--teal);
     border-radius: 10px;
     padding: 20px;
-    margin: 10px;
+    margin: 10px 0 0;
 }
 
 .proven {
@@ -197,6 +200,22 @@ table td:last child {
     text-align: left;
 }
 
+.button {
+    display: inline-block;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    background-color: var(--White);
+    border-radius: 5px;
+    color: black;
+    box-shadow: 0 4px 8px black;
+
+}
+
+footer {
+    background-color: var(--Lavender);
+    
+}
 /* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
 @media screen and (min-width:450px){
     .coaching{
@@ -237,11 +256,28 @@ table td:last child {
 /*-------------------- MEDIA QUERY (large) ------------------------------------*/
 @media screen and (min-width: 950px){
     .services{
-        display: flex;
-        flex-direction: column;
-    }
-   
-
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+        
+        }
+   .coaching{
+    grid-column: 1/2;
+        display: block;    
+   }
+   .group{
+    display: block;
+   }
+   .works{
+    display: block;
+   }
+   .pricing{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+   }
+   .coach{
+    grid-column: 1 / 2;
+   }
 }
 /*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
 @media screen and (min-width: 1280px){
