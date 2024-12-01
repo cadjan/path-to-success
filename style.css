@@ -206,12 +206,44 @@ table td:last child {
     
 }
 /*-------------------- MEDIA QUERY (medium) --------------------------------*/
-@media  (min-width: 620px) {
+@media screen and (min-width: 620px) {
     .coaching{
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr); 
     }
+    #sub1 {
+        grid-column: 1 / 2;
+   }
+    #sub3 {
+        grid-column: 1 / 3;
+    }
+    .group{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+     
+    #sub4 {
+        grid-column: 1 / 2;
+    }
+   
+    .why-choose{
+        display: flex;
+        align-content: space-evenly;
+    }
+
+
    
 }
 /*-------------------- MEDIA QUERY (large) ------------------------------------*/
+@media screen and (min-width: 950px){
+    .services{
+        display: flex;
+        flex-direction: column;
+    }
+   
+
+}
 /*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
+@media screen and (min-width: 1280px){
+
+}
