@@ -193,11 +193,11 @@ table td {
     max-width: 50%;
 }
 
-table td:first child {
+table td:first-child {
     text-align: left;
 }
 
-table td:last child {
+table td:last-child {
     text-align: left;
 }
 
