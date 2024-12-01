@@ -93,10 +93,11 @@ h1{
     background-color: var(--Pink);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    padding: 40px 0 5px 10px;
+    padding: 40px 5px 5px 10px;
     margin: 0 20px 0;
     text-align: center;
     color: var(--White);
+    font-style: italic;
 }
 
 nav h2{
@@ -136,7 +137,7 @@ nav {
 .why {
     background-color: var(--Pink);
     padding: 10px;
-    margin: 10px 0;
+    margin: 10px 0 0;
 
 }
 .why p {
@@ -202,19 +203,27 @@ table td:last child {
 
 .button {
     display: inline-block;
-    padding: 12px 24px;
+    padding: 5px;
     text-align: center;
     text-decoration: none;
     background-color: var(--White);
     border-radius: 5px;
     color: black;
     box-shadow: 0 4px 8px black;
+   
 
 }
 
 footer {
     background-color: var(--Lavender);
-    
+    display: flex;
+    justify-content: space-around;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-bottom: 60px;
+    padding: 10px;
+    text-align: center;
+    color: var(--White);
 }
 /* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
 @media screen and (min-width:450px){
@@ -222,7 +231,10 @@ footer {
         display: grid;
         grid-template-columns: 1fr;
     }
-    
+    .why{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 }
 /*-------------------- MEDIA QUERY (medium) --------------------------------*/
 @media screen and (min-width: 620px) {
@@ -244,7 +256,17 @@ footer {
     #sub4 {
         grid-column: 1 / 2;
     }
-   
+    .pricing{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+       }
+       .coach{
+        grid-column: 1 / 2;
+       }
+    .summ {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
     .why-choose{
         display: flex;
         align-content: space-evenly;
@@ -281,5 +303,8 @@ footer {
 }
 /*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
 @media screen and (min-width: 1280px){
-
+    body {
+        margin-left: 40px;
+        margin-right: 40px; 
+    }
 }
